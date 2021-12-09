@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4FCFF"
-    tools:context=".SplashScreen">
+    android:background="#80F7FEFF"
+    tools:context=".SplashScreen_Activity">
 
     <LinearLayout
         android:id="@+id/layout_vertical"
@@ -19,37 +19,30 @@
             android:id="@+id/msg_bienvenida"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
             android:text="Bienvenido"
-            android:textSize="28sp" />
-
-        <TextView
-            android:id="@+id/msg_appName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dip"
-            android:text="@string/app_name"
-            android:textSize="22sp" />
-
-        <TextView
-            android:id="@+id/msg_AuthorName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dip"
-            android:text="Alfonso Enriquez"
-            android:textSize="16sp" />
+            android:textSize="34sp" />
 
         <ImageView
             android:id="@+id/img_splash"
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:adjustViewBounds="true"
-            app:srcCompat="?android:attr/fingerprintAuthDrawable" />
+            app:srcCompat="@drawable/logo_app" />
+
+        <TextView
+            android:id="@+id/msg_appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="FireAlertMonitor App"
+            android:textSize="24sp" />
 
         <ProgressBar
             android:id="@+id/progressBar"
             style="@style/Widget.AppCompat.ProgressBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginTop="15dp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

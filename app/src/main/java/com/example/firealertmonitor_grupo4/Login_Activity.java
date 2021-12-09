@@ -104,7 +104,7 @@ public class Login_Activity extends AppCompatActivity {
             startActivity(intent);
         } else {
             System.out.println("Sin registrarse");
-            Toast.makeText(getApplicationContext(), "Usuario no registrado", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "Usuario no registrado", Toast.LENGTH_SHORT).show();
         }
     }
 }

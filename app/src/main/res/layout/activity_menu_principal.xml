@@ -65,7 +65,8 @@
             android:id="@+id/btn_verSensores"
             android:layout_width="260dp"
             android:layout_height="wrap_content"
-            android:text="Visualizar sensores" />
+            android:onClick="ver_DispositivosRegistrados"
+            android:text="Ver Dispositivos" />
 
         <Button
             android:id="@+id/btn_registrarDispositivo"

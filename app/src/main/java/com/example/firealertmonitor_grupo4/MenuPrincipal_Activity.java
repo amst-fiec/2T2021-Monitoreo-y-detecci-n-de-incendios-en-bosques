@@ -41,4 +41,9 @@ public class MenuPrincipal_Activity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void ver_DispositivosRegistrados(View view){
+        Intent intent = new Intent(this, DispositivosRegistrados_Activity.class);
+        startActivity(intent);
+    }
+
 }

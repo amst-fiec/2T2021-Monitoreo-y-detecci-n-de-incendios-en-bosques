@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "726808493387",
+    "project_id": "firealertmonitor-g4",
+    "storage_bucket": "firealertmonitor-g4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726808493387:android:f70bb4e578a86aa1b37cce",
+        "android_client_info": {
+          "package_name": "com.example.firealertmonitor_grupo4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "726808493387-if82ri7nphqaqib5bd7sbj234dimgnsl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firealertmonitor_grupo4",
+            "certificate_hash": "93e82902de91a2764f2950f25c6e3eb482534840"
+          }
+        },
+        {
+          "client_id": "726808493387-eluu5agu83uulfdeoabob207e9843m7i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAor_OYdWx_fWSvEvpkhhUnxOnr3-H3Pk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "726808493387-eluu5agu83uulfdeoabob207e9843m7i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

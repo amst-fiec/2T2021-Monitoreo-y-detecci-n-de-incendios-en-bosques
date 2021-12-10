@@ -17,7 +17,5 @@ public class DispositivosRegistrados_Activity extends AppCompatActivity {
 
     public void volver(View view){
         finish();
-        Intent menu = new Intent(this, MenuPrincipal_Activity.class);
-        startActivity(menu);
     }
 }

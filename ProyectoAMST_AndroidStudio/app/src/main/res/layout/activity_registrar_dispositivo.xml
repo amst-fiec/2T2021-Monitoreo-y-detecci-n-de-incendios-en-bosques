@@ -28,7 +28,7 @@
                 android:layout_height="140dp"
                 android:layout_marginTop="15dp"
                 android:adjustViewBounds="true"
-                app:srcCompat="@drawable/logo_app" />
+                app:srcCompat="@drawable/iot_icon" />
 
             <TextView
                 android:id="@+id/txt_tipoSensorLabel"
@@ -205,6 +205,7 @@
                     android:layout_width="175dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:onClick="volver"
                     android:text="Atrás"
                     app:backgroundTint="#F3FF5722" />
 

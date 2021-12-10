@@ -41,7 +41,7 @@ public class Login_Activity extends AppCompatActivity {
         String msg = intent.getStringExtra("msg");
         if(msg != null){
             if(msg.equals("cerrarSesion")){
-                Toast.makeText(getApplicationContext(), "Cerrando sesión", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Sesión finalizada", Toast.LENGTH_SHORT).show();
                 cerrarSesion();
             }
         }
@@ -104,7 +104,19 @@ public class Login_Activity extends AppCompatActivity {
             startActivity(intent);
         } else {
             System.out.println("Sin registrarse");
-            //Toast.makeText(getApplicationContext(), "Usuario no registrado", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            updateUI(currentUser);
+            Toast toast = Toast.makeText(getApplicationContext(), "Sesión iniciada como "+currentUser.getDisplayName(), Toast.LENGTH_SHORT);
+            toast.show();
+        } else{
+            System.out.println("Error - user is null");
         }
     }
 }

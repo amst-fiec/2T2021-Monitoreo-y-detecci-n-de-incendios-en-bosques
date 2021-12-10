@@ -9,11 +9,11 @@
 
     <TextView
         android:id="@+id/txt_dispositivosRegistradosLabel"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#CCEFEFEF"
-        android:gravity="center"
         android:text="Dispositivos Registrados"
+        android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,10 +32,11 @@
 
     <Button
         android:id="@+id/btn_volver1"
-        android:layout_width="260dp"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:onClick="volver"
         android:text="Atrás"
+        app:backgroundTint="#F3FF5722"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarThumbVertical="@color/fui_transparent"
+    tools:context=".RegistrarUsuario_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_menuPrincipalLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="#CCEFEFEF"
+            android:gravity="center"
+            android:text="Registrar Usuario"
+            android:textColor="#F2808080"
+            android:textSize="24sp"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="30dp"
+            app:srcCompat="@drawable/user" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_tipoUsuarioLabel"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="Tipo usuario"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spinner_tipoSensor"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                tools:minHeight="48dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_emailRegistroLabel"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|end"
+                android:text="Correo"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/txt_emailRegistro"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:hint="Ingrese correo electrónico"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_passwordRegistroLabel"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|end"
+                android:text="Contraseña"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/txt_passwordRegistro"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:hint="Ingrese contraseña"
+                android:inputType="text|textPassword"
+                android:minHeight="48dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_passwordRegistroVerfLabel"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:text="Confirmar contraseña"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/txt_passwordRegistroVerf"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:hint="Ingrese de nuevo contraseña"
+                android:inputType="text|textPassword"
+                android:minHeight="48dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_registrarUsuario"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="Registrar"
+                android:textAllCaps="false"
+                app:cornerRadius="20dp" />
+
+            <Button
+                android:id="@+id/btn_volver3"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:onClick="volver"
+                android:text="Atrás"
+                android:textAllCaps="false"
+                app:backgroundTint="#F3FF5722"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

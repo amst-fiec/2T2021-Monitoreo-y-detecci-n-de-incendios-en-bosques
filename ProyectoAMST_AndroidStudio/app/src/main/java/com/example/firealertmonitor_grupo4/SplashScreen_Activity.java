@@ -7,6 +7,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
 
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.appcheck.FirebaseAppCheck;
+import com.google.firebase.appcheck.debug.DebugAppCheckProviderFactory;
+import com.google.firebase.appcheck.safetynet.SafetyNetAppCheckProviderFactory;
+
 @SuppressLint("CustomSplashScreen")
 public class SplashScreen_Activity extends Activity {
     private ImageView img_logo;
@@ -17,6 +22,11 @@ public class SplashScreen_Activity extends Activity {
         setContentView(R.layout.activity_splash_screen);
         img_logo = findViewById(R.id.img_splash);
         img_logo.setImageResource(R.drawable.logo_app);
+
+        FirebaseApp.initializeApp(/*context=*/ this);
+        FirebaseAppCheck firebaseAppCheck = FirebaseAppCheck.getInstance();
+        firebaseAppCheck.installAppCheckProviderFactory(SafetyNetAppCheckProviderFactory.getInstance());
+        firebaseAppCheck.installAppCheckProviderFactory(DebugAppCheckProviderFactory.getInstance());
 
         new Handler().postDelayed(new Runnable() {
             @Override

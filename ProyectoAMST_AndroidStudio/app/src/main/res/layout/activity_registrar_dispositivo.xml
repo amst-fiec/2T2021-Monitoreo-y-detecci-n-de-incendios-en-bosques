@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="7dp"
     tools:context=".RegistrarDispositivo_Activity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="7dp">
 
             <TextView
                 android:id="@+id/txt_dispositivosRegistradosLabel"
@@ -36,68 +37,32 @@
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginBottom="40dp"
                 android:adjustViewBounds="true"
                 app:srcCompat="@drawable/iot_icon" />
-
-            <TextView
-                android:id="@+id/txt_tipoSensorLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_marginTop="45dp"
-                android:text="Tipo de sensor: "
-                android:textSize="18sp"
-                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="7dp"
-                android:orientation="vertical"
-                android:paddingLeft="15dp">
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/txt_tipoSensorLabel"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end"
+                    android:text="Tipo de sensor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:clickable="true"
-                        android:editable="true"
-                        android:minWidth="40dp"
-                        android:minHeight="40dp"
-                        android:text="Temperatura"
-                        android:textSize="16sp" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:minWidth="40dp"
-                        android:minHeight="40dp"
-                        android:text="Humedad"
-                        android:textSize="16sp" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:minWidth="40dp"
-                        android:minHeight="40dp"
-                        android:text="Humo"
-                        android:textSize="16sp" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:minWidth="40dp"
-                        android:minHeight="40dp"
-                        android:text="Fuego"
-                        android:textSize="16sp" />
-                </RadioGroup>
+                <Spinner
+                    android:id="@+id/spinner_tipoSensor"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    tools:minHeight="48dp" />
 
             </LinearLayout>
 
@@ -110,7 +75,8 @@
                 <TextView
                     android:id="@+id/txt_idSensorLabel"
                     android:layout_width="120dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
                     android:text="Id del sensor: "
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -119,9 +85,9 @@
                     android:id="@+id/txt_idSensor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:textSize="18sp" />
+                    android:inputType="textShortMessage"
+                    android:minHeight="48dp"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -133,7 +99,8 @@
                 <TextView
                     android:id="@+id/txt_descripcionLabel"
                     android:layout_width="120dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
                     android:text="Descripción: "
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -142,9 +109,9 @@
                     android:id="@+id/txt_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:textSize="18sp" />
+                    android:inputType="textShortMessage|textCapSentences"
+                    android:minHeight="48dp"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -170,7 +137,8 @@
                     <TextView
                         android:id="@+id/txt_latitudLabel"
                         android:layout_width="80dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
                         android:text="Latitud: "
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -179,9 +147,9 @@
                         android:id="@+id/txt_latitud"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ems="10"
                         android:inputType="number"
-                        android:textSize="18sp" />
+                        android:textSize="16sp"
+                        tools:minHeight="48dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -193,7 +161,8 @@
                     <TextView
                         android:id="@+id/txt_longitudLabel"
                         android:layout_width="80dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
                         android:text="Longitud: "
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -202,43 +171,47 @@
                         android:id="@+id/txt_longitud"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ems="10"
                         android:inputType="number"
-                        android:textSize="18sp" />
+                        android:minHeight="48dp"
+                        android:textSize="16sp" />
                 </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="45dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btn_confirmar"
-                    android:layout_width="200dp"
+                    android:layout_width="175dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginEnd="5dp"
-                    android:text="Confirmar" />
+                    android:onClick="registrar"
+                    android:text="Confirmar"
+                    android:textAllCaps="false"
+                    app:cornerRadius="20dp" />
 
                 <Button
-                    android:id="@+id/btn_volver2"
+                    android:id="@+id/btn_volver3"
                     android:layout_width="175dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginStart="5dp"
                     android:onClick="volver"
                     android:text="Atrás"
-                    app:backgroundTint="#F3FF5722" />
+                    android:textAllCaps="false"
+                    app:backgroundTint="#F3FF5722"
+                    app:cornerRadius="20dp" />
 
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
